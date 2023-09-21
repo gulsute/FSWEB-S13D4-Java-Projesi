@@ -12,21 +12,27 @@ public class Point {
             return x;
         }
 
-        public void setX (int yeniX) {
-        this.x=yeniX;
+        public void setX (int X) {
+        this.x=X;
         }
 
     public double getY() {
         return y;
     }
 
-    public void setY(int yeniY) {
-        this.y = yeniY;
+    public void setY(int Y) {
+        this.y = Y;
     }
 
     public double distance () {
-        double calculation = ((xB − xA)*(xB - xA) + (yB − yA) * (yB - yA));
-        return Math.sqrt(calculation);
+       return  Math.sqrt(Math.pow(x-0,2) + Math.pow(y-0,2));
+    }
+    public double distance (int a, int b) {
+        return  Math.sqrt(Math.pow(x-a,2) + Math.pow(y-b,2));
+    }
+
+    public double distance (Point p) {
+        return  Math.sqrt(Math.pow(x-p.x,2) + Math.pow(y-p.y,2));
     }
 
 }
